@@ -1,178 +1,254 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VinCrux | Soundtracking life</title>
-  <meta name="description" content="VinCrux — Electronic/House + Hip-Hop/R&B. Latest release, discography, videos, and bookings." />
-  <meta name="theme-color" content="#070A10" />
-  <link rel="stylesheet" href="./assets/style.css" />
+  <meta name="description" content="VinCrux — Electronic/House + Hip-Hop/R&B. Latest release, discography, videos, and contact." />
+  <meta name="theme-color" content="#05070e" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind config (optional, but gives you a more premium look) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['ui-sans-serif','system-ui','-apple-system','Segoe UI','Roboto','Arial']
+          },
+          boxShadow: {
+            glow: '0 0 0 1px rgba(255,255,255,.10), 0 18px 80px rgba(0,0,0,.65)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Subtle grain + scanlines (keeps it modern/futuristic without looking messy) */
+    .grain:before{
+      content:"";
+      position:absolute; inset:0;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.30'/%3E%3C/svg%3E");
+      opacity:.08;
+      pointer-events:none;
+      border-radius: inherit;
+    }
+    .scan:after{
+      content:"";
+      position:absolute; inset:-20%;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.08) 0px,
+        rgba(255,255,255,0.08) 1px,
+        transparent 2px,
+        transparent 7px
+      );
+      opacity:.07;
+      pointer-events:none;
+    }
+  </style>
 </head>
 
-<body>
-  <!-- Subtle futuristic background -->
-  <div class="bg" aria-hidden="true">
-    <div class="halo h1"></div>
-    <div class="halo h2"></div>
-    <div class="grid"></div>
-    <div class="grain"></div>
+<body class="bg-[#05070e] text-slate-100 selection:bg-cyan-300/30 selection:text-white">
+
+  <!-- Background glow -->
+  <div aria-hidden="true" class="fixed inset-0 -z-10 overflow-hidden">
+    <div class="absolute -top-[420px] -left-[420px] h-[900px] w-[900px] rounded-full blur-3xl opacity-20"
+         style="background: radial-gradient(circle, rgba(110,231,255,.95), transparent 60%);"></div>
+    <div class="absolute -bottom-[520px] -right-[520px] h-[980px] w-[980px] rounded-full blur-3xl opacity-20"
+         style="background: radial-gradient(circle, rgba(167,139,250,.95), transparent 60%);"></div>
+    <div class="absolute inset-0 opacity-[0.14]"
+         style="background-image:
+            linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+          background-size: 56px 56px;
+          mask-image: radial-gradient(circle at 40% 20%, black 0%, transparent 62%);">
+    </div>
   </div>
 
-  <!-- Top mini nav (optional but useful) -->
-  <header class="top">
-    <div class="wrap topbar">
-      <a class="brand" href="#top" aria-label="Home">
-        <span class="dot"></span>
-        <span class="brandtext">VINCRUX</span>
+  <!-- Top bar -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-[#05070e]/55 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3">
+      <a href="#top" class="flex items-center gap-2 font-black tracking-[0.18em] text-[12px] uppercase">
+        <span class="h-2.5 w-2.5 rounded-full"
+              style="background: radial-gradient(circle at 30% 30%, #fff, rgba(110,231,255,.95)); box-shadow: 0 0 26px rgba(110,231,255,.55)"></span>
+        VINCRUX
       </a>
 
-      <nav class="nav" aria-label="Site">
-        <a href="#latest">Latest</a>
-        <a href="#discography">Discography</a>
-        <a href="#watch">Watch</a>
-        <a href="#about">About</a>
+      <nav class="hidden items-center gap-5 text-[12px] font-bold uppercase tracking-[0.14em] text-slate-200/70 md:flex">
+        <a class="hover:text-slate-100" href="#latest">Latest</a>
+        <a class="hover:text-slate-100" href="#discography">Discography</a>
+        <a class="hover:text-slate-100" href="#watch">Watch</a>
+        <a class="hover:text-slate-100" href="#about">About</a>
+        <a class="hover:text-slate-100" href="#contact">Contact</a>
       </nav>
 
-      <a class="cta" href="#latest">PLAY</a>
+      <a href="#latest"
+         class="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-[12px] font-black uppercase tracking-[0.14em] hover:bg-white/10">
+        Play
+      </a>
     </div>
   </header>
 
-  <!-- Header banner -->
-  <section id="top" class="banner">
-    <div class="wrap banner-inner">
-      <div class="banner-copy">
-        <h1 class="title">VinCrux <span class="sep">|</span> <span class="grad">Soundtracking life</span></h1>
-        <p class="subtitle">
-          Electronic / House + Hip-Hop / R&B — bright club energy with deep emotional storytelling.
-          Built for 120–130 BPM uplift, cinematic texture, and modern rap/sung hooks.
-        </p>
+  <!-- HERO -->
+  <section id="top" class="relative">
+    <!-- Hero background image -->
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute inset-0 bg-center bg-cover opacity-55"
+           style="background-image:
+             linear-gradient(to top, rgba(5,7,14,.92), rgba(5,7,14,.30) 48%, rgba(5,7,14,.72)),
+             url('./assets/artist.jpeg');">
+      </div>
+      <div class="absolute inset-0 scan"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 to-[#05070e]"></div>
+    </div>
 
-        <div class="chips">
-          <span class="chip">120–130 BPM</span>
-          <span class="chip">Melodic House</span>
-          <span class="chip">Pop Rap</span>
-          <span class="chip">R&B Emotion</span>
+    <div class="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 py-14 md:grid-cols-12 md:py-20">
+      <div class="md:col-span-7">
+        <div class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/20 px-3 py-2 text-[12px] font-extrabold tracking-wide text-slate-200/80">
+          <span class="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_18px_rgba(52,211,153,.55)]"></span>
+          Electronic / House + Hip-Hop / R&B
         </div>
 
-        <div class="banner-actions">
-          <a class="btn" href="#latest">Listen</a>
-          <a class="btn ghost" href="#watch">Watch</a>
-          <a class="btn ghost" href="#about">About</a>
+        <h1 class="mt-5 text-4xl font-black leading-[1.02] tracking-[-0.03em] md:text-6xl">
+          VinCrux <span class="opacity-40">|</span>
+          <span class="bg-gradient-to-r from-cyan-300 to-violet-300 bg-clip-text text-transparent">
+            Soundtracking life
+          </span>
+        </h1>
+
+        <p class="mt-4 max-w-2xl text-base leading-7 text-slate-200/75 md:text-lg">
+          Bright 120–130 BPM grooves, cinematic textures, and modern rap/sung hooks.
+          Uplifting club energy with deep emotional storytelling.
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span class="rounded-full border border-white/15 bg-white/5 px-3 py-2 text-xs font-extrabold text-slate-200/75">120–130 BPM</span>
+          <span class="rounded-full border border-white/15 bg-white/5 px-3 py-2 text-xs font-extrabold text-slate-200/75">Melodic House</span>
+          <span class="rounded-full border border-white/15 bg-white/5 px-3 py-2 text-xs font-extrabold text-slate-200/75">Pop Rap</span>
+          <span class="rounded-full border border-white/15 bg-white/5 px-3 py-2 text-xs font-extrabold text-slate-200/75">R&B Emotion</span>
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#latest"
+             class="rounded-2xl bg-gradient-to-r from-cyan-300 to-violet-300 px-5 py-3 font-black text-[#061018] shadow-glow hover:opacity-95">
+            Listen now
+          </a>
+          <a href="#watch"
+             class="rounded-2xl border border-white/15 bg-white/5 px-5 py-3 font-black hover:bg-white/10">
+            Watch
+          </a>
+          <a href="#contact"
+             class="rounded-2xl border border-white/15 bg-white/5 px-5 py-3 font-black hover:bg-white/10">
+            Book / Contact
+          </a>
         </div>
       </div>
 
-      <div class="banner-card">
-        <div class="cardline">
-          <span class="badge">STATUS</span>
-          <span class="line"></span>
-          <span class="muted small">online</span>
-        </div>
+      <div class="md:col-span-5">
+        <div class="grain relative rounded-3xl border border-white/15 bg-white/5 p-4 shadow-glow">
+          <div class="flex items-center gap-3">
+            <span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[11px] font-black uppercase tracking-[0.14em]">Status</span>
+            <div class="h-px flex-1 bg-white/10"></div>
+            <span class="text-xs font-bold text-slate-200/70">online</span>
+          </div>
 
-        <div class="statgrid">
-          <div class="stat">
-            <div class="k">Style</div>
-            <div class="v">House × Rap</div>
+          <div class="mt-4 grid grid-cols-1 gap-3">
+            <a class="flex items-center justify-between rounded-2xl border border-white/15 bg-white/5 px-4 py-3 font-black hover:border-cyan-300/30"
+               href="https://open.spotify.com/artist/YOUR_ARTIST_ID" target="_blank" rel="noreferrer">
+              <span>Spotify</span><span class="text-slate-200/70">↗</span>
+            </a>
+            <a class="flex items-center justify-between rounded-2xl border border-white/15 bg-white/5 px-4 py-3 font-black hover:border-cyan-300/30"
+               href="https://www.youtube.com/@YOURCHANNEL" target="_blank" rel="noreferrer">
+              <span>YouTube</span><span class="text-slate-200/70">↗</span>
+            </a>
+            <a class="flex items-center justify-between rounded-2xl border border-white/15 bg-white/5 px-4 py-3 font-black hover:border-cyan-300/30"
+               href="https://instagram.com/YOURHANDLE" target="_blank" rel="noreferrer">
+              <span>Instagram</span><span class="text-slate-200/70">↗</span>
+            </a>
           </div>
-          <div class="stat">
-            <div class="k">Mood</div>
-            <div class="v">Uplifting / Deep</div>
-          </div>
-          <div class="stat">
-            <div class="k">Focus</div>
-            <div class="v">Releases / Visuals</div>
-          </div>
-        </div>
 
-        <div class="quicklinks">
-          <a class="ql" href="https://open.spotify.com/artist/YOUR_ARTIST_ID" target="_blank" rel="noreferrer">
-            <span>Spotify</span><span class="arr">↗</span>
-          </a>
-          <a class="ql" href="https://www.youtube.com/@YOURCHANNEL" target="_blank" rel="noreferrer">
-            <span>YouTube</span><span class="arr">↗</span>
-          </a>
-          <a class="ql" href="https://instagram.com/YOURHANDLE" target="_blank" rel="noreferrer">
-            <span>Instagram</span><span class="arr">↗</span>
-          </a>
+          <p class="mt-4 text-sm leading-6 text-slate-200/60">
+            Keep this page minimal and update only the embeds when you release new music.
+          </p>
         </div>
       </div>
     </div>
 
-    <div class="fade" aria-hidden="true"></div>
+    <div class="h-16 bg-gradient-to-b from-transparent to-[#05070e]"></div>
   </section>
 
-  <main class="wrap main">
-    <!-- Latest release -->
-    <section id="latest" class="section">
-      <div class="head">
-        <h2>Latest release</h2>
-        <p class="muted">Keep this updated. Everything else can stay stable.</p>
+  <!-- MAIN -->
+  <main class="mx-auto max-w-6xl px-4 pb-16">
+
+    <!-- Latest -->
+    <section id="latest" class="pt-10">
+      <div class="flex flex-wrap items-end justify-between gap-3">
+        <h2 class="text-xl font-black tracking-tight">Latest release</h2>
+        <p class="text-sm font-semibold text-slate-200/65">Update one embed and your site stays current.</p>
       </div>
 
-      <div class="panel">
-        <div class="paneltop">
-          <span class="badge">LIVE</span>
-          <span class="line"></span>
-          <span class="muted small">Spotify track embed</span>
+      <div class="mt-4 rounded-3xl border border-white/15 bg-white/5 p-5 shadow-glow">
+        <div class="flex items-center gap-3">
+          <span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[11px] font-black uppercase tracking-[0.14em]">Live</span>
+          <div class="h-px flex-1 bg-white/10"></div>
+          <span class="text-xs font-bold text-slate-200/70">Spotify track embed</span>
         </div>
 
         <!-- Replace YOUR_TRACK_ID -->
-        <iframe class="embed"
+        <iframe class="mt-4 w-full rounded-2xl bg-white/5"
           src="https://open.spotify.com/embed/track/YOUR_TRACK_ID"
           width="100%" height="152" frameborder="0" allowfullscreen
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 
-        <div class="actions">
-          <a class="btn ghost" href="https://open.spotify.com/artist/YOUR_ARTIST_ID" target="_blank" rel="noreferrer">Open artist</a>
-          <a class="btn ghost" href="#discography">Discography</a>
+        <div class="mt-4 flex flex-wrap gap-3">
+          <a class="rounded-2xl border border-white/15 bg-white/5 px-5 py-3 font-black hover:bg-white/10"
+             href="https://open.spotify.com/artist/YOUR_ARTIST_ID" target="_blank" rel="noreferrer">Open artist</a>
+          <a class="rounded-2xl border border-white/15 bg-white/5 px-5 py-3 font-black hover:bg-white/10"
+             href="#discography">Discography</a>
         </div>
       </div>
     </section>
 
     <!-- Discography -->
-    <section id="discography" class="section">
-      <div class="head">
-        <h2>Discography</h2>
-        <p class="muted">
-          Embed your full catalog from a platform. Default below is Spotify Artist embed.
-        </p>
+    <section id="discography" class="pt-10">
+      <div class="flex flex-wrap items-end justify-between gap-3">
+        <h2 class="text-xl font-black tracking-tight">Discography</h2>
+        <p class="text-sm font-semibold text-slate-200/65">Embed your catalog from a platform (Spotify Artist embed below).</p>
       </div>
 
-      <div class="panel">
-        <div class="paneltop">
-          <span class="badge">CATALOG</span>
-          <span class="line"></span>
-          <span class="muted small">Spotify artist embed</span>
+      <div class="mt-4 rounded-3xl border border-white/15 bg-white/5 p-5 shadow-glow">
+        <div class="flex items-center gap-3">
+          <span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[11px] font-black uppercase tracking-[0.14em]">Catalog</span>
+          <div class="h-px flex-1 bg-white/10"></div>
+          <span class="text-xs font-bold text-slate-200/70">Spotify artist embed</span>
         </div>
 
         <!-- Replace YOUR_ARTIST_ID -->
-        <iframe class="embed tall"
+        <iframe class="mt-4 w-full rounded-2xl bg-white/5"
           src="https://open.spotify.com/embed/artist/YOUR_ARTIST_ID"
           width="100%" height="520" frameborder="0" allowfullscreen
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 
-        <!-- OPTIONAL: SoundCloud playlist embed instead of Spotify
-        <div class="paneltop" style="margin-top:14px;">
-          <span class="badge">ALT</span>
-          <span class="line"></span>
-          <span class="muted small">SoundCloud playlist embed</span>
-        </div>
-        <iframe class="embed tall"
-          scrolling="no" frameborder="no" allow="autoplay"
-          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/YOUR_PLAYLIST_ID&color=%2300ffff&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
-        -->
+        <p class="mt-3 text-sm text-slate-200/60">
+          If you prefer SoundCloud/Bandcamp embeds, share your link and I’ll swap the embed code.
+        </p>
       </div>
     </section>
 
     <!-- Watch -->
-    <section id="watch" class="section">
-      <div class="head">
-        <h2>Watch</h2>
-        <p class="muted">One featured visual. Clean, no clutter.</p>
+    <section id="watch" class="pt-10">
+      <div class="flex flex-wrap items-end justify-between gap-3">
+        <h2 class="text-xl font-black tracking-tight">Watch</h2>
+        <p class="text-sm font-semibold text-slate-200/65">One featured video (clean, high impact).</p>
       </div>
 
-      <div class="frame">
+      <div class="mt-4 overflow-hidden rounded-3xl border border-white/15 bg-white/5 shadow-glow">
         <!-- Replace YOUR_VIDEO_ID -->
-        <iframe
+        <iframe class="block h-[56vw] w-full md:h-[520px]"
           src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
           title="VinCrux featured video"
           frameborder="0"
@@ -181,58 +257,72 @@
       </div>
     </section>
 
-    <!-- About + artist pic -->
-    <section id="about" class="section">
-      <div class="head">
-        <h2>About</h2>
-        <p class="muted">Bio + press-ready image block.</p>
+    <!-- About + photo -->
+    <section id="about" class="pt-10">
+      <div class="flex flex-wrap items-end justify-between gap-3">
+        <h2 class="text-xl font-black tracking-tight">About</h2>
+        <p class="text-sm font-semibold text-slate-200/65">Bio + artist photo + links.</p>
       </div>
 
-      <div class="aboutgrid">
-        <div class="portrait">
-          <img src="./assets/artist.jpeg" alt="VinCrux portrait" />
-          <div class="portraitfx" aria-hidden="true"></div>
-          <div class="caption">
-            <div class="cap-title">VINCRUX</div>
-            <div class="cap-sub">Electronic / House + Hip-Hop / R&B</div>
+      <div class="mt-4 grid grid-cols-1 gap-4 md:grid-cols-12">
+        <div class="relative overflow-hidden rounded-3xl border border-white/15 bg-white/5 shadow-glow md:col-span-5">
+          <img src="./assets/artist.jpeg" alt="VinCrux portrait" class="h-full w-full object-cover opacity-90" />
+          <div class="absolute inset-0 scan"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-black/25"></div>
+          <div class="absolute bottom-3 left-3 rounded-2xl border border-white/15 bg-black/25 px-4 py-3 backdrop-blur">
+            <div class="text-xs font-black uppercase tracking-[0.18em]">VINCRUX</div>
+            <div class="text-sm font-bold text-slate-200/75">Electronic / House + Hip-Hop / R&B</div>
           </div>
         </div>
 
-        <div class="panel">
-          <p class="body">
+        <div class="rounded-3xl border border-white/15 bg-white/5 p-5 shadow-glow md:col-span-7">
+          <p class="leading-7 text-slate-100/90">
             VinCrux blends melodic house brightness with pop-rap and R&B emotion—music built for late-night drives,
             airport memories, and peak-moment drops. Uplifting, modern, and cinematic: club energy with a human heart.
           </p>
 
-          <div class="chips" style="margin-top:14px;">
-            <span class="chip">Melodic House</span>
-            <span class="chip">Tech House</span>
-            <span class="chip">Pop Rap</span>
-            <span class="chip">R&B</span>
-            <span class="chip">Cinematic</span>
-          </div>
-
-          <div class="rows">
-            <div class="row"><span class="muted small">Location</span><span class="right">Dubai / Nagpur</span></div>
-            <div class="row"><span class="muted small">Bookings</span><span class="right">Available</span></div>
-            <div class="row"><span class="muted small">Email</span><a class="right link" href="mailto:you@yourdomain.com">you@yourdomain.com</a></div>
-          </div>
-
-          <div class="links">
-            <a class="linkbtn" href="https://open.spotify.com/artist/YOUR_ARTIST_ID" target="_blank" rel="noreferrer">Spotify</a>
-            <a class="linkbtn" href="https://www.youtube.com/@YOURCHANNEL" target="_blank" rel="noreferrer">YouTube</a>
-            <a class="linkbtn" href="https://instagram.com/YOURHANDLE" target="_blank" rel="noreferrer">Instagram</a>
-            <a class="linkbtn" href="https://tiktok.com/@YOURHANDLE" target="_blank" rel="noreferrer">TikTok</a>
-            <a class="linkbtn" href="https://soundcloud.com/YOURHANDLE" target="_blank" rel="noreferrer">SoundCloud</a>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="rounded-full border border-white/15 bg-white/5 px-3 py-2 text-xs font-extrabold text-slate-200/75">Melodic House</span>
+            <span class="rounded-full border border-white/15 bg-white/5 px-3 py-2 text-xs font-extrabold text-slate-200/75">Tech House</span>
+            <span class="rounded-full border border-white/15 bg-white/5 px-3 py-2 text-xs font-extrabold text-slate-200/75">Pop Rap</span>
+            <span class="rounded-full border border-white/15 bg-white/5 px-3 py-2 text-xs font-extrabold text-slate-200/75">R&B</span>
+            <span class="rounded-full border border-white/15 bg-white/5 px-3 py-2 text-xs font-extrabold text-slate-200/75">Cinematic</span>
           </div>
         </div>
       </div>
     </section>
 
-    <footer class="footer">
+    <!-- Contact -->
+    <section id="contact" class="pt-10">
+      <div class="flex flex-wrap items-end justify-between gap-3">
+        <h2 class="text-xl font-black tracking-tight">Contact</h2>
+        <p class="text-sm font-semibold text-slate-200/65">Bookings, collaborations, press.</p>
+      </div>
+
+      <div class="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
+        <div class="rounded-3xl border border-white/15 bg-white/5 p-5 shadow-glow">
+          <div class="text-xs font-black uppercase tracking-[0.14em] text-slate-200/70">Email</div>
+          <a class="mt-2 block text-lg font-black" href="mailto:you@yourdomain.com">you@yourdomain.com</a>
+          <p class="mt-2 text-sm text-slate-200/60">Add a custom domain later without redesigning.</p>
+        </div>
+
+        <div class="rounded-3xl border border-white/15 bg-white/5 p-5 shadow-glow">
+          <div class="text-xs font-black uppercase tracking-[0.14em] text-slate-200/70">Links</div>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <a class="rounded-2xl border border-white/15 bg-white/5 px-4 py-2 font-black hover:bg-white/10" href="https://open.spotify.com/artist/YOUR_ARTIST_ID" target="_blank" rel="noreferrer">Spotify</a>
+            <a class="rounded-2xl border border-white/15 bg-white/5 px-4 py-2 font-black hover:bg-white/10" href="https://www.youtube.com/@YOURCHANNEL" target="_blank" rel="noreferrer">YouTube</a>
+            <a class="rounded-2xl border border-white/15 bg-white/5 px-4 py-2 font-black hover:bg-white/10" href="https://instagram.com/YOURHANDLE" target="_blank" rel="noreferrer">Instagram</a>
+            <a class="rounded-2xl border border-white/15 bg-white/5 px-4 py-2 font-black hover:bg-white/10" href="https://tiktok.com/@YOURHANDLE" target="_blank" rel="noreferrer">TikTok</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mt-10 flex flex-wrap items-center justify-between gap-3 border-t border-white/10 py-6 text-sm text-slate-200/60">
       <span>© <span id="y"></span> VinCrux</span>
-      <span class="muted">Built on GitHub Pages</span>
+      <span>Built on GitHub Pages</span>
     </footer>
+
   </main>
 
   <script>
