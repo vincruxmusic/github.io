@@ -6,34 +6,33 @@
   <title>VinCrux | Official</title>
   <meta name="description" content="VinCrux — cinematic house + pop rap / R&B. Latest release, visuals, and contact." />
   <meta name="theme-color" content="#070A10" />
-
-  <!-- Project-site safe paths -->
   <link rel="stylesheet" href="./assets/style.css" />
 </head>
 
 <body>
-  <!-- Background (minimal, cinematic) -->
+  <!-- Background -->
   <div class="bg" aria-hidden="true">
-    <div class="glow g1"></div>
-    <div class="glow g2"></div>
+    <div class="halo h1"></div>
+    <div class="halo h2"></div>
     <div class="grain"></div>
   </div>
 
+  <!-- Header -->
   <header class="top">
-    <div class="wrap top-inner">
-      <a class="brand" href="#top" aria-label="VinCrux home">
-        <span class="brand-dot"></span>
-        <span class="brand-text">VINCRUX</span>
+    <div class="wrap top-grid">
+      <a class="brand" href="#top" aria-label="VinCrux Home">
+        <span class="dot"></span>
+        <span class="word">VINCRUX</span>
       </a>
 
-      <nav class="nav" aria-label="Primary">
+      <nav class="nav" aria-label="Primary navigation">
         <a href="#listen">Listen</a>
         <a href="#watch">Watch</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
 
-      <a class="cta" href="#listen">Play</a>
+      <a class="play" href="#listen">PLAY</a>
     </div>
   </header>
 
@@ -41,69 +40,77 @@
     <!-- HERO -->
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">Electronic / House + Hip-Hop / R&B</p>
+        <div class="kicker">Electronic / House + Hip-Hop / R&B</div>
 
-        <h1 class="h1">
-          Cinematic energy.
-          <span class="h1-sub">Human emotion.</span>
+        <h1 class="title">
+          Bright club energy,
+          <span class="grad">deep emotional core</span>.
         </h1>
 
         <p class="lead">
-          Bright 120–130 BPM grooves, sung hooks, and modern rap cadence — built for late-night drives and peak moments.
+          Uplifting 120–130 BPM grooves, modern rap cadence, and cinematic hooks —
+          designed for late-night drives and peak-moment drops.
         </p>
 
-        <div class="hero-actions">
+        <div class="actions">
           <a class="btn" href="#listen">Listen now</a>
           <a class="btn ghost" href="#watch">Watch</a>
           <a class="btn ghost" href="#contact">Book / Contact</a>
         </div>
 
-        <div class="meta">
-          <div class="meta-item">
-            <div class="meta-k">BPM</div>
-            <div class="meta-v">120–130</div>
+        <div class="metrics">
+          <div class="m">
+            <div class="mk">BPM</div>
+            <div class="mv">120–130</div>
           </div>
-          <div class="meta-item">
-            <div class="meta-k">Style</div>
-            <div class="meta-v">House × Rap</div>
+          <div class="m">
+            <div class="mk">Blend</div>
+            <div class="mv">House × Rap</div>
           </div>
-          <div class="meta-item">
-            <div class="meta-k">Mood</div>
-            <div class="meta-v">Uplifting / Deep</div>
+          <div class="m">
+            <div class="mk">Mood</div>
+            <div class="mv">Uplifting</div>
           </div>
         </div>
       </div>
 
       <div class="hero-media">
-        <figure class="poster">
+        <div class="poster">
           <img src="./assets/artist.jpeg" alt="VinCrux artist photo" />
-          <div class="poster-fade" aria-hidden="true"></div>
-          <figcaption class="poster-cap">
-            <span class="cap-title">Latest Era</span>
-            <span class="cap-sub">New releases • visuals • collabs</span>
-          </figcaption>
-        </figure>
+          <div class="overlay" aria-hidden="true"></div>
 
-        <div class="linkrow">
-          <a class="pill" href="https://open.spotify.com/artist/YOUR_ARTIST_ID" target="_blank" rel="noreferrer">Spotify</a>
-          <a class="pill" href="https://www.youtube.com/@YOURCHANNEL" target="_blank" rel="noreferrer">YouTube</a>
-          <a class="pill" href="https://instagram.com/YOURHANDLE" target="_blank" rel="noreferrer">Instagram</a>
+          <div class="stamp">
+            <div class="stamp-top">VINCRUX</div>
+            <div class="stamp-sub">Official Artist Site</div>
+          </div>
+        </div>
+
+        <div class="rail">
+          <a class="rail-link" href="https://open.spotify.com/artist/YOUR_ARTIST_ID" target="_blank" rel="noreferrer">
+            <span>Spotify</span><span class="arrow">↗</span>
+          </a>
+          <a class="rail-link" href="https://www.youtube.com/@YOURCHANNEL" target="_blank" rel="noreferrer">
+            <span>YouTube</span><span class="arrow">↗</span>
+          </a>
+          <a class="rail-link" href="https://instagram.com/YOURHANDLE" target="_blank" rel="noreferrer">
+            <span>Instagram</span><span class="arrow">↗</span>
+          </a>
         </div>
       </div>
     </section>
 
     <!-- LISTEN -->
     <section id="listen" class="section">
-      <div class="section-head">
+      <div class="head">
         <h2>Now Playing</h2>
-        <p class="muted">Keep this updated and the whole site stays fresh.</p>
+        <p class="muted">Update one embed and the site stays current.</p>
       </div>
 
       <div class="card">
-        <div class="card-top">
-          <div class="badge">LIVE EMBED</div>
-          <div class="divider"></div>
-          <div class="muted small">Spotify</div>
+        <div class="card-bar">
+          <span class="badge">LIVE</span>
+          <span class="line"></span>
+          <span class="muted small">Spotify Embed</span>
         </div>
 
         <!-- Replace YOUR_TRACK_ID -->
@@ -121,30 +128,30 @@
 
     <!-- WATCH -->
     <section id="watch" class="section">
-      <div class="section-head">
+      <div class="head">
         <h2>Featured Visual</h2>
-        <p class="muted">One strong video. Minimal. High impact.</p>
+        <p class="muted">One strong visual, no clutter.</p>
       </div>
 
       <div class="frame">
         <!-- Replace YOUR_VIDEO_ID -->
         <iframe
           src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-          title="VinCrux video"
+          title="VinCrux featured video"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
       </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- ABOUT + LINKS -->
     <section id="about" class="section">
-      <div class="section-head">
+      <div class="head">
         <h2>About</h2>
         <p class="muted">Short, playlist-friendly positioning.</p>
       </div>
 
-      <div class="grid">
+      <div class="cols">
         <div class="panel">
           <p class="body">
             VinCrux blends melodic house brightness with pop-rap and R&B emotion—music built for late-night drives,
@@ -162,23 +169,13 @@
 
         <div class="panel">
           <div class="rows">
-            <div class="row">
-              <span class="muted small">Location</span>
-              <span class="right">Dubai / Nagpur</span>
-            </div>
-            <div class="row">
-              <span class="muted small">For fans of</span>
-              <span class="right">Bright house + emotional rap hooks</span>
-            </div>
-            <div class="row">
-              <span class="muted small">Availability</span>
-              <span class="right">Bookings / Collabs</span>
-            </div>
+            <div class="row"><span class="muted small">Location</span><span class="right">Dubai / Nagpur</span></div>
+            <div class="row"><span class="muted small">Sound</span><span class="right">House • Pop Rap • R&B</span></div>
+            <div class="row"><span class="muted small">Availability</span><span class="right">Bookings / Collabs</span></div>
           </div>
 
           <div class="links">
             <a class="link" href="https://open.spotify.com/artist/YOUR_ARTIST_ID" target="_blank" rel="noreferrer">Spotify</a>
-            <a class="link" href="https://music.apple.com/" target="_blank" rel="noreferrer">Apple Music</a>
             <a class="link" href="https://www.youtube.com/@YOURCHANNEL" target="_blank" rel="noreferrer">YouTube</a>
             <a class="link" href="https://instagram.com/YOURHANDLE" target="_blank" rel="noreferrer">Instagram</a>
             <a class="link" href="https://tiktok.com/@YOURHANDLE" target="_blank" rel="noreferrer">TikTok</a>
@@ -190,20 +187,20 @@
 
     <!-- CONTACT -->
     <section id="contact" class="section">
-      <div class="section-head">
+      <div class="head">
         <h2>Contact</h2>
         <p class="muted">Bookings, collaborations, press.</p>
       </div>
 
-      <div class="grid">
+      <div class="cols">
         <div class="panel">
           <div class="muted small">Email</div>
           <a class="contact" href="mailto:you@yourdomain.com">you@yourdomain.com</a>
-          <div class="muted small" style="margin-top:10px;">Tip: add a custom domain later, no redesign required.</div>
+          <div class="muted small" style="margin-top:10px;">Custom domain can be added later.</div>
         </div>
 
         <div class="panel">
-          <div class="muted small">Focus</div>
+          <div class="muted small">For</div>
           <div class="contact">Bookings • Collabs • Press</div>
           <div class="muted small" style="margin-top:10px;">Response: 24–48 hours.</div>
         </div>
