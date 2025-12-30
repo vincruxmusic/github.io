@@ -6,21 +6,20 @@
   <title>VinCrux | Official</title>
   <meta name="description" content="VinCrux — electronic/house + hip-hop/R&B. Releases, videos, and contact." />
   <meta name="theme-color" content="#060811" />
-  <link rel="stylesheet" href="assets/style.css" />
+
+  <!-- IMPORTANT: use ./ for project sites like /github.io/ -->
+  <link rel="stylesheet" href="./assets/style.css" />
 </head>
 
 <body>
-  <!-- Ambient background layers -->
   <div class="bg" aria-hidden="true">
     <div class="aurora a1"></div>
     <div class="aurora a2"></div>
     <div class="aurora a3"></div>
     <div class="noise"></div>
     <div class="mesh"></div>
-    <div class="spot" id="spot"></div>
   </div>
 
-  <!-- Top bar -->
   <header class="topbar">
     <div class="wrap topbar-inner">
       <a class="logo" href="#top">
@@ -41,7 +40,6 @@
     </div>
   </header>
 
-  <!-- Hero -->
   <section id="top" class="wrap hero">
     <div class="hero-left">
       <div class="pill">
@@ -57,7 +55,7 @@
 
       <p class="sub">
         Uplifting 120–130 BPM grooves, modern rap cadence, and cinematic melodies —
-        designed for late-night drives, airport memories, and peak-moment drops.
+        designed for late-night drives and peak-moment drops.
       </p>
 
       <div class="hero-cta">
@@ -83,9 +81,9 @@
     </div>
 
     <div class="hero-right">
-      <!-- Wide banner image -->
       <div class="banner">
-        <img src="assets/artist.jpeg" alt="VinCrux press photo" />
+        <!-- IMPORTANT: use ./ for project sites like /github.io/ -->
+        <img src="./assets/artist.jpeg" alt="VinCrux press photo" />
         <div class="banner-overlay"></div>
         <div class="banner-chip">
           <div class="chip-title">VinCrux</div>
@@ -93,7 +91,6 @@
         </div>
       </div>
 
-      <!-- Micro cards -->
       <div class="microgrid">
         <a class="micro" href="https://open.spotify.com/artist/YOUR_ARTIST_ID" target="_blank" rel="noreferrer">
           <div class="micro-title">Spotify</div>
@@ -111,29 +108,16 @@
     </div>
   </section>
 
-  <!-- Ticker strip -->
-  <section class="ticker" aria-hidden="true">
-    <div class="ticker-track">
-      <span>NEW DROPS •</span><span>MELODIC HOUSE •</span><span>POP RAP •</span><span>R&B EMOTION •</span>
-      <span>CLUB ENERGY •</span><span>CINEMATIC TEXTURES •</span><span>VINCRUX •</span>
-      <span>NEW DROPS •</span><span>MELODIC HOUSE •</span><span>POP RAP •</span><span>R&B EMOTION •</span>
-      <span>CLUB ENERGY •</span><span>CINEMATIC TEXTURES •</span><span>VINCRUX •</span>
-    </div>
-  </section>
-
   <main class="wrap main">
-    <!-- Listen -->
     <section id="listen" class="card split">
       <div class="card-left">
         <h2>Now Playing</h2>
-        <p class="muted">
-          Paste your Spotify embed for the latest track. Keep this one updated and the whole site stays fresh.
-        </p>
+        <p class="muted">Paste your Spotify embed for the latest track.</p>
 
         <div class="chips">
           <span class="tag">Melodic House</span>
-          <span class="tag">Tech House</span>
           <span class="tag">Pop Rap</span>
+          <span class="tag">R&B</span>
           <span class="tag">120–130 BPM</span>
         </div>
 
@@ -150,7 +134,6 @@
             <div class="np-text">LIVE EMBED</div>
           </div>
 
-          <!-- Replace YOUR_TRACK_ID -->
           <iframe class="spotify"
             src="https://open.spotify.com/embed/track/YOUR_TRACK_ID"
             width="100%" height="152" frameborder="0" allowfullscreen
@@ -159,15 +142,13 @@
       </div>
     </section>
 
-    <!-- Watch -->
     <section id="watch" class="card">
       <div class="card-head">
         <h2>Featured Visual</h2>
-        <p class="muted">Put your strongest video first. Keep it minimal and high impact.</p>
+        <p class="muted">Put your strongest video first.</p>
       </div>
 
       <div class="video">
-        <!-- Replace YOUR_VIDEO_ID -->
         <iframe
           src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
           title="VinCrux video"
@@ -177,58 +158,26 @@
       </div>
     </section>
 
-    <!-- About -->
     <section id="about" class="card">
       <div class="card-head">
         <h2>About</h2>
         <p class="muted">Short, playlist-friendly positioning.</p>
       </div>
 
-      <div class="about-grid">
-        <div class="about-main">
-          <p class="about-text">
-            VinCrux blends melodic house brightness with pop-rap and R&B emotion—music built for late-night drives,
-            airport memories, and peak-moment drops. Uplifting, modern, and cinematic: club energy with a human heart.
-          </p>
+      <p class="about-text">
+        VinCrux blends melodic house brightness with pop-rap and R&B emotion—music built for late-night drives,
+        airport memories, and peak-moment drops. Uplifting, modern, and cinematic: club energy with a human heart.
+      </p>
 
-          <div class="quote">
-            <div class="quote-mark">“</div>
-            <div class="quote-body">
-              Bright club energy — deep emotional core.
-              <div class="quote-sub">Signature: 120–130 BPM melodic drops + rap/sung hooks</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="about-side">
-          <div class="stack">
-            <div class="stack-row">
-              <div class="stack-k">Location</div>
-              <div class="stack-v">Dubai / Nagpur</div>
-            </div>
-            <div class="stack-row">
-              <div class="stack-k">Sound</div>
-              <div class="stack-v">House • Pop Rap • R&B</div>
-            </div>
-            <div class="stack-row">
-              <div class="stack-k">Mood</div>
-              <div class="stack-v">Uplifting • Emotional • Cinematic</div>
-            </div>
-          </div>
-
-          <div class="links">
-            <a class="linkbtn" href="https://open.spotify.com/artist/YOUR_ARTIST_ID" target="_blank" rel="noreferrer">Spotify</a>
-            <a class="linkbtn" href="https://www.youtube.com/@YOURCHANNEL" target="_blank" rel="noreferrer">YouTube</a>
-            <a class="linkbtn" href="https://instagram.com/YOURHANDLE" target="_blank" rel="noreferrer">Instagram</a>
-            <a class="linkbtn" href="https://tiktok.com/@YOURHANDLE" target="_blank" rel="noreferrer">TikTok</a>
-            <a class="linkbtn" href="https://soundcloud.com/YOURHANDLE" target="_blank" rel="noreferrer">SoundCloud</a>
-          </div>
-        </div>
+      <div class="links">
+        <a class="linkbtn" href="https://open.spotify.com/artist/YOUR_ARTIST_ID" target="_blank" rel="noreferrer">Spotify</a>
+        <a class="linkbtn" href="https://www.youtube.com/@YOURCHANNEL" target="_blank" rel="noreferrer">YouTube</a>
+        <a class="linkbtn" href="https://instagram.com/YOURHANDLE" target="_blank" rel="noreferrer">Instagram</a>
+        <a class="linkbtn" href="https://tiktok.com/@YOURHANDLE" target="_blank" rel="noreferrer">TikTok</a>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="card contact-card">
+    <section id="contact" class="card">
       <div class="card-head">
         <h2>Contact</h2>
         <p class="muted">Bookings, collaborations, press.</p>
@@ -238,13 +187,11 @@
         <div class="contact-block">
           <div class="lbl">Email</div>
           <a class="big" href="mailto:you@yourdomain.com">you@yourdomain.com</a>
-          <div class="hint">Replace with your real email. Domain email can be added later.</div>
         </div>
 
         <div class="contact-block">
           <div class="lbl">For</div>
           <div class="big">Bookings • Collabs • Press</div>
-          <div class="hint">Response time: 24–48 hours.</div>
         </div>
       </div>
     </section>
@@ -257,22 +204,6 @@
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
-
-    // Subtle mouse-follow spotlight (desktop)
-    const spot = document.getElementById("spot");
-    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    if (!prefersReduced) {
-      window.addEventListener("mousemove", (e) => {
-        spot.style.setProperty("--x", e.clientX + "px");
-        spot.style.setProperty("--y", e.clientY + "px");
-        spot.classList.add("on");
-      }, { passive: true });
-
-      window.addEventListener("mouseleave", () => {
-        spot.classList.remove("on");
-      });
-    }
   </script>
 </body>
 </html>
