@@ -4,52 +4,59 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VinCrux | Official</title>
-  <meta name="description" content="VinCrux — cinematic house + pop rap / R&B. Latest release, visuals, and contact." />
-  <meta name="theme-color" content="#070A10" />
+  <meta name="description" content="VinCrux — Futuristic house + pop rap / R&B. Releases, visuals, and bookings." />
+  <meta name="theme-color" content="#05070e" />
   <link rel="stylesheet" href="./assets/style.css" />
 </head>
 
 <body>
-  <!-- Background -->
-  <div class="bg" aria-hidden="true">
-    <div class="halo h1"></div>
-    <div class="halo h2"></div>
-    <div class="grain"></div>
-  </div>
-
-  <!-- Header -->
-  <header class="top">
-    <div class="wrap top-grid">
-      <a class="brand" href="#top" aria-label="VinCrux Home">
-        <span class="dot"></span>
-        <span class="word">VINCRUX</span>
-      </a>
-
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="#listen">Listen</a>
-        <a href="#watch">Watch</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <a class="play" href="#listen">PLAY</a>
+  <!-- HERO: background image + futuristic overlays -->
+  <section id="top" class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-fx" aria-hidden="true">
+      <div class="fx-grid"></div>
+      <div class="fx-scan"></div>
+      <div class="fx-glow g1"></div>
+      <div class="fx-glow g2"></div>
+      <div class="fx-noise"></div>
+      <div class="fx-vignette"></div>
     </div>
-  </header>
 
-  <main id="top" class="wrap">
-    <!-- HERO -->
-    <section class="hero">
+    <!-- Header -->
+    <header class="top">
+      <div class="wrap top-grid">
+        <a class="brand" href="#top" aria-label="VinCrux Home">
+          <span class="dot"></span>
+          <span class="word">VINCRUX</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="#listen">Listen</a>
+          <a href="#watch">Watch</a>
+          <a href="#about">Bio</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <a class="play" href="#listen">PLAY</a>
+      </div>
+    </header>
+
+    <!-- Hero content -->
+    <div class="wrap hero-inner">
       <div class="hero-copy">
-        <div class="kicker">Electronic / House + Hip-Hop / R&B</div>
+        <div class="kicker">
+          <span class="pulse"></span>
+          Electronic / House + Hip-Hop / R&B
+        </div>
 
         <h1 class="title">
-          Bright club energy,
-          <span class="grad">deep emotional core</span>.
+          Neon club energy.
+          <span class="grad">Deep human emotion.</span>
         </h1>
 
         <p class="lead">
-          Uplifting 120–130 BPM grooves, modern rap cadence, and cinematic hooks —
-          designed for late-night drives and peak-moment drops.
+          Bright 120–130 BPM drops, cinematic textures, and rap/sung hooks —
+          built for late-night drives, airport memories, and peak moments.
         </p>
 
         <div class="actions">
@@ -68,42 +75,49 @@
             <div class="mv">House × Rap</div>
           </div>
           <div class="m">
-            <div class="mk">Mood</div>
-            <div class="mv">Uplifting</div>
+            <div class="mk">Mode</div>
+            <div class="mv">Futuristic • Uplifting</div>
           </div>
         </div>
       </div>
 
-      <div class="hero-media">
-        <div class="poster">
-          <img src="./assets/artist.jpeg" alt="VinCrux artist photo" />
-          <div class="overlay" aria-hidden="true"></div>
+      <div class="hero-side">
+        <div class="sidecard">
+          <div class="sidecard-top">
+            <span class="badge">SYSTEM</span>
+            <span class="line"></span>
+            <span class="muted small">quick links</span>
+          </div>
 
-          <div class="stamp">
-            <div class="stamp-top">VINCRUX</div>
-            <div class="stamp-sub">Official Artist Site</div>
+          <div class="quick">
+            <a class="q" href="https://open.spotify.com/artist/YOUR_ARTIST_ID" target="_blank" rel="noreferrer">
+              <span>Spotify</span><span class="arrow">↗</span>
+            </a>
+            <a class="q" href="https://www.youtube.com/@YOURCHANNEL" target="_blank" rel="noreferrer">
+              <span>YouTube</span><span class="arrow">↗</span>
+            </a>
+            <a class="q" href="https://instagram.com/YOURHANDLE" target="_blank" rel="noreferrer">
+              <span>Instagram</span><span class="arrow">↗</span>
+            </a>
+          </div>
+
+          <div class="hint">
+            <span class="muted small">Tip:</span> Keep this site minimal; update only your latest embed.
           </div>
         </div>
-
-        <div class="rail">
-          <a class="rail-link" href="https://open.spotify.com/artist/YOUR_ARTIST_ID" target="_blank" rel="noreferrer">
-            <span>Spotify</span><span class="arrow">↗</span>
-          </a>
-          <a class="rail-link" href="https://www.youtube.com/@YOURCHANNEL" target="_blank" rel="noreferrer">
-            <span>YouTube</span><span class="arrow">↗</span>
-          </a>
-          <a class="rail-link" href="https://instagram.com/YOURHANDLE" target="_blank" rel="noreferrer">
-            <span>Instagram</span><span class="arrow">↗</span>
-          </a>
-        </div>
       </div>
-    </section>
+    </div>
 
+    <!-- Hero bottom fade so the next section blends nicely -->
+    <div class="hero-bottom" aria-hidden="true"></div>
+  </section>
+
+  <main class="wrap main">
     <!-- LISTEN -->
     <section id="listen" class="section">
       <div class="head">
         <h2>Now Playing</h2>
-        <p class="muted">Update one embed and the site stays current.</p>
+        <p class="muted">Update one embed and your site stays current.</p>
       </div>
 
       <div class="card">
@@ -144,14 +158,25 @@
       </div>
     </section>
 
-    <!-- ABOUT + LINKS -->
+    <!-- BIO (with artist image here) -->
     <section id="about" class="section">
       <div class="head">
-        <h2>About</h2>
-        <p class="muted">Short, playlist-friendly positioning.</p>
+        <h2>Artist Bio</h2>
+        <p class="muted">A clean EPK-style block for fans, curators, and bookings.</p>
       </div>
 
       <div class="cols">
+        <!-- Futuristic artist image card -->
+        <div class="holo">
+          <img src="./assets/artist.jpeg" alt="VinCrux portrait" />
+          <div class="holo-fx" aria-hidden="true"></div>
+          <div class="holo-cap">
+            <div class="hc-title">VINCRUX</div>
+            <div class="hc-sub">Electronic / House + Hip-Hop / R&B</div>
+          </div>
+        </div>
+
+        <!-- Bio + links -->
         <div class="panel">
           <p class="body">
             VinCrux blends melodic house brightness with pop-rap and R&B emotion—music built for late-night drives,
@@ -165,12 +190,10 @@
             <span class="tag">R&B</span>
             <span class="tag">120–130 BPM</span>
           </div>
-        </div>
 
-        <div class="panel">
           <div class="rows">
             <div class="row"><span class="muted small">Location</span><span class="right">Dubai / Nagpur</span></div>
-            <div class="row"><span class="muted small">Sound</span><span class="right">House • Pop Rap • R&B</span></div>
+            <div class="row"><span class="muted small">For fans of</span><span class="right">Bright house + emotional hooks</span></div>
             <div class="row"><span class="muted small">Availability</span><span class="right">Bookings / Collabs</span></div>
           </div>
 
@@ -192,7 +215,7 @@
         <p class="muted">Bookings, collaborations, press.</p>
       </div>
 
-      <div class="cols">
+      <div class="cols contact-cols">
         <div class="panel">
           <div class="muted small">Email</div>
           <a class="contact" href="mailto:you@yourdomain.com">you@yourdomain.com</a>
