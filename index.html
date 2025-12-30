@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VinCrux | Official</title>
+  <meta name="description" content="VinCrux — electronic + hip-hop/R&B. New releases, videos, and contact." />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="wrap">
+    <div class="hero">
+      <div>
+        <h1>VinCrux</h1>
+        <p class="tagline">Electronic / House + Hip-Hop / R&B — soundtracking life.</p>
+        <div class="cta">
+          <a class="btn" href="#listen">Listen</a>
+          <a class="btn ghost" href="#watch">Watch</a>
+          <a class="btn ghost" href="#contact">Contact</a>
+        </div>
+      </div>
+      <img class="avatar" src="assets/artist.jpg" alt="VinCrux press photo" />
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="listen" class="card">
+      <h2>Latest Release</h2>
+      <p>Stream the newest track/EP here.</p>
+
+      <!-- Spotify Embed: replace the src with your Spotify embed link -->
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/YOUR_TRACK_ID"
+        width="100%" height="152" frameborder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+      </iframe>
+      <p class="small">Tip: Spotify provides official embed code you can paste into your site.</p>
+    </section>
+
+    <section id="watch" class="card">
+      <h2>Watch</h2>
+      <div class="video">
+        <!-- Replace with your YouTube embed URL -->
+        <iframe width="560" height="315"
+          src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section id="about" class="card">
+      <h2>About</h2>
+      <p>
+        VinCrux is an electronic music producer and songwriter blending bright, uplifting house energy with
+        hip-hop/R&B emotion—music designed to feel like a memory in motion.
+      </p>
+      <ul class="bullets">
+        <li>Location: Dubai / Nagpur</li>
+        <li>Sounds like: melodic house • pop-rap • emotional club</li>
+        <li>For bookings/press: see contact below</li>
+      </ul>
+    </section>
+
+    <section id="links" class="card">
+      <h2>Follow</h2>
+      <div class="links">
+        <a href="https://open.spotify.com/artist/YOUR_ARTIST_ID" target="_blank" rel="noreferrer">Spotify</a>
+        <a href="https://www.youtube.com/@YOURCHANNEL" target="_blank" rel="noreferrer">YouTube</a>
+        <a href="https://instagram.com/YOURHANDLE" target="_blank" rel="noreferrer">Instagram</a>
+      </div>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:you@yourdomain.com">you@yourdomain.com</a></p>
+      <p class="small">If you don’t have a domain email yet, use any email address for now.</p>
+    </section>
+  </main>
+
+  <footer class="wrap small">
+    © <span id="y"></span> VinCrux
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
