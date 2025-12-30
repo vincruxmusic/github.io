@@ -4,82 +4,194 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VinCrux | Official</title>
-  <meta name="description" content="VinCrux — electronic + hip-hop/R&B. New releases, videos, and contact." />
+  <meta name="description" content="VinCrux — electronic/house + hip-hop/R&B. Releases, videos, and contact." />
+  <meta name="theme-color" content="#0b0f14" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
+
 <body>
-  <header class="wrap">
-    <div class="hero">
-      <div>
-        <h1>VinCrux</h1>
-        <p class="tagline">Electronic / House + Hip-Hop / R&B — soundtracking life.</p>
-        <div class="cta">
-          <a class="btn" href="#listen">Listen</a>
-          <a class="btn ghost" href="#watch">Watch</a>
-          <a class="btn ghost" href="#contact">Contact</a>
-        </div>
+  <!-- Background accents -->
+  <div class="bg">
+    <div class="orb o1"></div>
+    <div class="orb o2"></div>
+    <div class="orb o3"></div>
+    <div class="grid"></div>
+  </div>
+
+  <!-- Top Nav -->
+  <header class="top">
+    <div class="wrap nav">
+      <a class="brand" href="#top">
+        <span class="dot"></span>
+        <span>VinCrux</span>
+      </a>
+
+      <nav class="menu">
+        <a href="#listen">Listen</a>
+        <a href="#watch">Watch</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a class="btn small" href="#listen">Latest Release</a>
       </div>
-      <img class="avatar" src="assets/artist.jpg" alt="VinCrux press photo" />
     </div>
   </header>
 
-  <main class="wrap">
-    <section id="listen" class="card">
-      <h2>Latest Release</h2>
-      <p>Stream the newest track/EP here.</p>
+  <!-- Hero -->
+  <section id="top" class="wrap hero">
+    <div class="hero-left">
+      <p class="chip">Electronic / House + Hip-Hop / R&B</p>
+      <h1>Soundtracking life with bright energy and deep emotion.</h1>
+      <p class="lead">
+        New releases, visuals, and booking contact — in one place.
+      </p>
 
-      <!-- Spotify Embed: replace the src with your Spotify embed link -->
-      <iframe style="border-radius:12px"
+      <div class="cta">
+        <a class="btn" href="#listen">Listen Now</a>
+        <a class="btn ghost" href="#watch">Watch</a>
+        <a class="btn ghost" href="#contact">Book / Contact</a>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="kpi">120–130</div>
+          <div class="lbl">BPM Zone</div>
+        </div>
+        <div class="stat">
+          <div class="kpi">House × Rap</div>
+          <div class="lbl">Signature Blend</div>
+        </div>
+        <div class="stat">
+          <div class="kpi">Global</div>
+          <div class="lbl">Release Ready</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="portrait">
+        <img src="assets/artist.jpg" alt="VinCrux press photo" />
+      </div>
+
+      <div class="mini-cards">
+        <div class="mini-card">
+          <div class="mini-title">Spotify</div>
+          <div class="mini-sub">Follow & stream</div>
+        </div>
+        <div class="mini-card">
+          <div class="mini-title">YouTube</div>
+          <div class="mini-sub">Music videos</div>
+        </div>
+        <div class="mini-card">
+          <div class="mini-title">Instagram</div>
+          <div class="mini-sub">Behind the scenes</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <!-- Listen -->
+    <section id="listen" class="card">
+      <div class="card-head">
+        <h2>Latest Release</h2>
+        <p class="muted">Paste your Spotify embed link below.</p>
+      </div>
+
+      <!-- Replace YOUR_TRACK_ID -->
+      <iframe class="embed"
         src="https://open.spotify.com/embed/track/YOUR_TRACK_ID"
-        width="100%" height="152" frameborder="0" allowfullscreen=""
+        width="100%" height="152" frameborder="0" allowfullscreen
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
       </iframe>
-      <p class="small">Tip: Spotify provides official embed code you can paste into your site.</p>
+
+      <div class="two">
+        <a class="pill" href="https://open.spotify.com/artist/YOUR_ARTIST_ID" target="_blank" rel="noreferrer">Open on Spotify</a>
+        <a class="pill" href="#contact">Bookings / Collabs</a>
+      </div>
     </section>
 
+    <!-- Watch -->
     <section id="watch" class="card">
-      <h2>Watch</h2>
+      <div class="card-head">
+        <h2>Watch</h2>
+        <p class="muted">Feature your strongest visual first.</p>
+      </div>
+
       <div class="video">
-        <!-- Replace with your YouTube embed URL -->
-        <iframe width="560" height="315"
+        <!-- Replace YOUR_VIDEO_ID -->
+        <iframe
           src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-          title="YouTube video player" frameborder="0"
+          title="VinCrux video"
+          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
       </div>
     </section>
 
+    <!-- About -->
     <section id="about" class="card">
-      <h2>About</h2>
-      <p>
-        VinCrux is an electronic music producer and songwriter blending bright, uplifting house energy with
-        hip-hop/R&B emotion—music designed to feel like a memory in motion.
-      </p>
-      <ul class="bullets">
-        <li>Location: Dubai / Nagpur</li>
-        <li>Sounds like: melodic house • pop-rap • emotional club</li>
-        <li>For bookings/press: see contact below</li>
-      </ul>
-    </section>
+      <div class="card-head">
+        <h2>About</h2>
+        <p class="muted">Short, playlist-friendly positioning.</p>
+      </div>
 
-    <section id="links" class="card">
-      <h2>Follow</h2>
-      <div class="links">
-        <a href="https://open.spotify.com/artist/YOUR_ARTIST_ID" target="_blank" rel="noreferrer">Spotify</a>
-        <a href="https://www.youtube.com/@YOURCHANNEL" target="_blank" rel="noreferrer">YouTube</a>
-        <a href="https://instagram.com/YOURHANDLE" target="_blank" rel="noreferrer">Instagram</a>
+      <p class="body">
+        VinCrux blends melodic house brightness with pop-rap and R&B emotion—music built for late-night drives,
+        airport memories, and peak-moment drops. Uplifting, modern, and cinematic: club energy with a human heart.
+      </p>
+
+      <div class="tags">
+        <span class="tag">Melodic House</span>
+        <span class="tag">Tech House</span>
+        <span class="tag">Pop Rap</span>
+        <span class="tag">R&B</span>
+        <span class="tag">120–130 BPM</span>
       </div>
     </section>
 
+    <!-- Links -->
+    <section class="card">
+      <div class="card-head">
+        <h2>Follow</h2>
+        <p class="muted">Keep these consistent everywhere.</p>
+      </div>
+
+      <div class="links">
+        <a class="linkbtn" href="https://open.spotify.com/artist/YOUR_ARTIST_ID" target="_blank" rel="noreferrer">Spotify</a>
+        <a class="linkbtn" href="https://music.apple.com/" target="_blank" rel="noreferrer">Apple Music</a>
+        <a class="linkbtn" href="https://www.youtube.com/@YOURCHANNEL" target="_blank" rel="noreferrer">YouTube</a>
+        <a class="linkbtn" href="https://instagram.com/YOURHANDLE" target="_blank" rel="noreferrer">Instagram</a>
+        <a class="linkbtn" href="https://tiktok.com/@YOURHANDLE" target="_blank" rel="noreferrer">TikTok</a>
+        <a class="linkbtn" href="https://soundcloud.com/YOURHANDLE" target="_blank" rel="noreferrer">SoundCloud</a>
+      </div>
+    </section>
+
+    <!-- Contact -->
     <section id="contact" class="card">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:you@yourdomain.com">you@yourdomain.com</a></p>
-      <p class="small">If you don’t have a domain email yet, use any email address for now.</p>
+      <div class="card-head">
+        <h2>Contact</h2>
+        <p class="muted">Bookings, collaborations, press.</p>
+      </div>
+
+      <div class="contact">
+        <div>
+          <div class="muted small">Email</div>
+          <a class="contact-big" href="mailto:you@yourdomain.com">you@yourdomain.com</a>
+        </div>
+        <div>
+          <div class="muted small">Location</div>
+          <div class="contact-big">Dubai / Nagpur</div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="wrap small">
-    © <span id="y"></span> VinCrux
+  <footer class="wrap footer">
+    <span>© <span id="y"></span> VinCrux</span>
+    <span class="muted">Built on GitHub Pages</span>
   </footer>
 
   <script>
