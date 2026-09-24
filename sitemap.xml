@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.vincrux.com/</loc>
-    <lastmod>2025-12-31</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image><image:loc>https://www.vincrux.com/assets/artist.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://www.vincrux.com/assets/vincrux_artist003.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://www.vincrux.com/assets/artistbackground.JPG</image:loc></image:image>
   </url>
 </urlset>
