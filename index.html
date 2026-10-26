@@ -19,8 +19,12 @@
   <meta name="author" content="VinCrux" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <link rel="canonical" href="https://www.vincrux.com/" />
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <!-- Site icon (VC logo). Google needs a square icon of 48px or larger -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/vincrux-icon-192.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/vincrux-icon-96.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/vincrux-icon-48.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
   <link rel="alternate" type="text/plain" href="/llms.txt" title="VinCrux facts for AI assistants" />
   <meta name="theme-color" content="#05060A" />
 
@@ -85,7 +89,7 @@
         "@id": "https://www.vincrux.com/#artist"
       },
       "inLanguage": "en",
-      "dateModified": "2026-10-16",
+      "dateModified": "2026-10-26",
       "primaryImageOfPage": {
         "@type": "ImageObject",
         "url": "https://www.vincrux.com/assets/og-vincrux.jpg",
@@ -104,7 +108,13 @@
         "https://www.vincrux.com/assets/about/vincrux-headshot-960.jpg",
         "https://www.vincrux.com/assets/og-vincrux.jpg"
       ],
-      "logo": "https://www.vincrux.com/assets/apple-touch-icon.png",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.vincrux.com/assets/icons/vincrux-logo-256.png",
+        "width": 256,
+        "height": 256,
+        "caption": "VinCrux VC logo"
+      },
       "description": "VinCrux is the stage name of Raosaheb Ramteke, a Nagpur-born multi-genre record producer and songwriter blending melody-forward writing with club-ready sound design across electronic, house, hip-hop, alt pop and alt R&B.",
       "genre": [
         "Electronic",
